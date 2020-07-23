@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/genresRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:scrollbars="none" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:id="@+id/slideGoBack"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:elevation="4dp"
+                android:visibility="gone"
+                app:shape_roundRect_borderColor="@color/colorWhite"
+                app:shape_roundRect_borderWidth="2dp"
+                app:shape_roundRect_bottomRightRadius="25dp"
+                app:shape_roundRect_topRightRadius="25dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"
+                    android:paddingEnd="15dp"
+                    android:src="@drawable/ic_arrow_left" />
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/slideRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:scrollbars="none" />
+
+            <com.github.florent37.shapeofview.shapes.RoundRectView
+                android:id="@+id/slideProgressBarInList"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|end"
+                android:elevation="4dp"
+                android:visibility="gone"
+                app:shape_roundRect_borderColor="@color/colorWhite"
+                app:shape_roundRect_borderWidth="2dp"
+                app:shape_roundRect_bottomLeftRadius="25dp"
+                app:shape_roundRect_topLeftRadius="25dp">
+
+                <ProgressBar
+                    android:id="@+id/slideProgress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/slideCheckMark"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"
+                    android:paddingEnd="5dp"
+                    android:src="@drawable/ic_checkmark"
+                    android:visibility="gone" />
+            </com.github.florent37.shapeofview.shapes.RoundRectView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/slideProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

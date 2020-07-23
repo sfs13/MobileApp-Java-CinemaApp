@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/castCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="52dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="25dp">
+
+        <ImageView
+            android:id="@+id/castImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/castName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:gravity="center|top"
+        android:maxLines="2"
+        android:textColor="@color/colorEnabled"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/castCharacter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center|top"
+        android:maxLines="2"
+        android:textColor="@color/colorGrey"
+        android:textSize="14sp" />
+</LinearLayout>
